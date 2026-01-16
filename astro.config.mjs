@@ -2,11 +2,21 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
+
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://pacific-ai-corp.github.io',
+  	base: 'pacific-doc/',
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'Pacific Ai Documentation',
+			logo: {
+				src: './src/assets/img/logo_1.svg',
+				replacesTitle: true,
+			},
+			      customCss: [
+				'./src/assets/css/custom.css',
+			],
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
 				{
@@ -21,6 +31,11 @@ export default defineConfig({
 					autogenerate: { directory: 'reference' },
 				},
 			],
+			components: {
+				Header: './src/components/Header.astro',
+				Hero: './src/components/Hero.astro',
+
+			},
 		}),
 	],
 });
