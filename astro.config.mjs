@@ -6,7 +6,7 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://pacific-ai-corp.github.io',
-  	base: 'pacific-doc/',
+  	base: '/',
 	integrations: [
 		starlight({
 			title: 'Pacific Ai Documentation',
